@@ -1,0 +1,45 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+flomo-web-clipper-backup-*.json
+
+# Local editor and agent state
+.AppleDouble
+.LSOverride
+._*
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+.codex/
+.claude/
+.agents/
+MEMORY.md
+memory/
+
+# Credentials, signing material and local data
+.npmrc
+.git-credentials
+*.pem
+*.key
+*.p8
+*.p12
+*.pfx
+*.mobileprovision
+*.crx
+/backups/
+/backup/
+/private/
+/local-data/
+/profiles/
+/artifacts/
+/coverage/
+
+# Internal drafts; keep on disk, omit from the public repository
+/PROJECT_SUMMARY.md
+/REQUIREMENTS.md

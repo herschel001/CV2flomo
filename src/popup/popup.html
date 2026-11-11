@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flomo Web Clipper</title>
+    <link rel="stylesheet" href="popup.css">
+    <style>
+        /* 内联关键样式，避免闪烁 */
+        .initial-hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .loading-placeholder {
+            height: 20px;
+            background: #f0f0f0;
+            border-radius: 4px;
+            margin: 8px 0;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+        }
+        /* 防止布局跳动的关键样式 */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 400px;
+            min-height: 600px;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <h1>Flomo Web Clipper</h1>
+            <div class="header-actions">
+                <span class="daily-count" id="dailyCount">今日: 0/100</span>
+                <button class="settings-btn" id="settingsBtn" title="设置">⚙️</button>
+            </div>
+        </div>
+
+        <!-- 标签区域 -->
+        <div class="section tags-section">
+            <div class="section-header">
+                <label>标签</label>
+                <span class="tag-count" id="tagCount">0/8</span>
+            </div>
+            <div class="tags-container" id="tagsContainer">
+                <!-- 标签将动态添加到这里 -->
+            </div>
+            <div id="commonTagSuggestions" class="content-actions" aria-label="常用标签"></div>
+            <div class="tag-input-container">
+                <input type="text" id="tagInput" placeholder="输入标签名称，按回车添加" maxlength="20">
+                <button id="addTagBtn" class="add-btn">+</button>
+            </div>
+        </div>
+
+        <!-- 原文粘贴区 -->
+        <div class="section content-section">
+            <div class="section-header">
+                <label>原文内容</label>
+                <span class="char-count" id="originalCharCount">0 字</span>
+            </div>
+            <div class="textarea-container">
+                <textarea maxlength="5000" id="originalContent" placeholder="粘贴文字或图片链接（本地图片不会上传）"></textarea>
+                <div class="image-preview" id="imagePreview"></div>
+            </div>
+            <p class="input-help">仅发送文字和链接；整条笔记（含标签、网页信息）最多 5000 字。</p>
+            <div class="content-actions">
+                <button id="clearOriginalBtn" class="action-btn secondary clear-btn">清空</button>
+            </div>
+        </div>
+
+        <!-- 个人想法区 -->
+        <div class="section thoughts-section">
+            <div class="section-header">
+                <label>个人想法</label>
+                <span class="char-count" id="thoughtsCharCount">0 字</span>
+            </div>
+            <textarea maxlength="5000" id="personalThoughts" placeholder="记录你的想法和感悟..."></textarea>
+        </div>
+
+        <!-- 网页信息区域 -->
+        <div class="section page-info-section">
+            <div class="section-header">
+                <label>网页信息</label>
+                <button id="refreshPageInfoBtn" class="refresh-btn" title="刷新">🔄</button>
+            </div>
+            <div class="page-info">
+                <div class="info-item">
+                    <span class="info-label">标题:</span>
+                    <span class="info-value" id="pageTitle">
+                        
+                    </span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">URL:</span>
+                    <span class="info-value" id="pageUrl">
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 操作区域 -->
+        <div class="actions-section">
+            <div class="status-message" id="statusMessage"></div>
+            <div class="action-buttons">
+                <button id="saveDraftBtn" class="secondary-btn">保存草稿</button>
+                <button id="sendBtn" class="primary-btn">发送到 Flomo</button>
+            </div>
+        </div>
+
+        <!-- 加载状态 -->
+        <div class="loading-overlay" id="loadingOverlay">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">发送中...</div>
+        </div>
+    </div>
+
+    <script type="module" src="popup.js"></script>
+</body>
+</html>

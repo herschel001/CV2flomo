@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成Flomo插件图标</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .icon-preview {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .icon-preview svg {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+        }
+        .instructions {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 30px;
+        }
+        .instructions h3 {
+            color: #495057;
+            margin-bottom: 15px;
+        }
+        .instructions ol {
+            margin-left: 20px;
+            line-height: 1.6;
+        }
+        .instructions li {
+            margin-bottom: 8px;
+        }
+        .download-section {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: #e3f2fd;
+            border-radius: 6px;
+        }
+        .download-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+            transition: background-color 0.2s;
+        }
+        .download-btn:hover {
+            background: #0056b3;
+        }
+        .code-section {
+            margin-top: 30px;
+        }
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Flomo Web Clipper 图标生成器</h1>
+        
+        <div class="icon-preview">
+            <h3>图标预览</h3>
+            <!-- 128x128 图标 -->
+            <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="64" cy="64" r="60" fill="#007bff" stroke="#0056b3" stroke-width="2"/>
+                <rect x="35" y="30" width="58" height="70" rx="4" fill="white" stroke="#0056b3" stroke-width="2"/>
+                <line x1="45" y1="45" x2="83" y2="45" stroke="#0056b3" stroke-width="2"/>
+                <line x1="45" y1="55" x2="83" y2="55" stroke="#0056b3" stroke-width="1.5"/>
+                <line x1="45" y1="65" x2="83" y2="65" stroke="#0056b3" stroke-width="1.5"/>
+                <line x1="45" y1="75" x2="83" y2="75" stroke="#0056b3" stroke-width="1.5"/>
+                <polygon points="95,25 95,40 80,40 80,25" fill="#28a745" stroke="#1e7e34" stroke-width="1.5"/>
+                <circle cx="87.5" cy="32.5" r="3" fill="white"/>
+                <path d="M50 90 L78 90 L74 86 L74 94 L78 90" fill="#ffc107" stroke="#e0a800" stroke-width="1.5"/>
+            </svg>
+            
+            <!-- 48x48 图标 -->
+            <svg width="48" height="48" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="64" cy="64" r="60" fill="#007bff" stroke="#0056b3" stroke-width="2"/>
+                <rect x="35" y="30" width="58" height="70" rx="4" fill="white" stroke="#0056b3" stroke-width="2"/>
+                <line x1="45" y1="45" x2="83" y2="45" stroke="#0056b3" stroke-width="2"/>
+                <line x1="45" y1="55" x2="83" y2="55" stroke="#0056b3" stroke-width="1.5"/>
+                <line x1="45" y1="65" x2="83" y2="65" stroke="#0056b3" stroke-width="1.5"/>
+                <line x1="45" y1="75" x2="83" y2="75" stroke="#0056b3" stroke-width="1.5"/>
+                <polygon points="95,25 95,40 80,40 80,25" fill="#28a745" stroke="#1e7e34" stroke-width="1.5"/>
+                <circle cx="87.5" cy="32.5" r="3" fill="white"/>
+                <path d="M50 90 L78 90 L74 86 L74 94 L78 90" fill="#ffc107" stroke="#e0a800" stroke-width="1.5"/>
+            </svg>
+            
+            <!-- 16x16 图标 -->
+            <svg width="16" height="16" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="64" cy="64" r="60" fill="#007bff" stroke="#0056b3" stroke-width="2"/>
+                <rect x="35" y="30" width="58" height="70" rx="4" fill="white" stroke="#0056b3" stroke-width="2"/>
+                <line x1="45" y1="45" x2="83" y2="45" stroke="#0056b3" stroke-width="2"/>
+                <line x1="45" y1="55" x2="83" y2="55" stroke="#0056b3" stroke-width="1.5"/>
+                <line x1="45" y1="65" x2="83" y2="65" stroke="#0056b3" stroke-width="1.5"/>
+                <line x1="45" y1="75" x2="83" y2="75" stroke="#0056b3" stroke-width="1.5"/>
+                <polygon points="95,25 95,40 80,40 80,25" fill="#28a745" stroke="#1e7e34" stroke-width="1.5"/>
+                <circle cx="87.5" cy="32.5" r="3" fill="white"/>
+                <path d="M50 90 L78 90 L74 86 L74 94 L78 90" fill="#ffc107" stroke="#e0a800" stroke-width="1.5"/>
+            </svg>
+        </div>
+
+        <div class="download-section">
+            <h3>📥 下载图标文件</h3>
+            <p>点击下方按钮生成并下载不同尺寸的图标文件：</p>
+            <br>
+            <button class="download-btn" onclick="downloadIcon(16)">下载 16×16</button>
+            <button class="download-btn" onclick="downloadIcon(32)">下载 32×32</button>
+            <button class="download-btn" onclick="downloadIcon(48)">下载 48×48</button>
+            <button class="download-btn" onclick="downloadIcon(128)">下载 128×128</button>
+            <br><br>
+            <button class="download-btn" onclick="downloadAllIcons()" style="background: #28a745;">下载全部图标</button>
+        </div>
+
+        <div class="code-section">
+            <h3>📝 SVG 源代码</h3>
+            <p>您也可以复制下面的SVG代码，使用在线工具转换为PNG格式：</p>
+            <div class="code-block" id="svgCode"></div>
+        </div>
+
+        <div class="instructions">
+            <h3>📋 使用说明</h3>
+            <ol>
+                <li><strong>下载图标文件：</strong>点击上方按钮下载不同尺寸的PNG图标文件</li>
+                <li><strong>手动转换：</strong>复制SVG代码，使用在线SVG转PNG工具进行转换</li>
+                <li><strong>图标命名：</strong>按照Chrome插件规范命名为 icon16.png, icon48.png, icon128.png</li>
+                <li><strong>文件放置：</strong>将图标文件放入项目的 icons/ 文件夹中</li>
+                <li><strong>manifest.json：</strong>确保manifest.json中正确引用了这些图标文件</li>
+            </ol>
+            
+            <h4>🎨 图标设计说明</h4>
+            <ul>
+                <li><strong>主色调：</strong>蓝色 (#007bff) - 代表专业和可信赖</li>
+                <li><strong>笔记图标：</strong>白色笔记本，代表记录功能</li>
+                <li><strong>标签图标：</strong>绿色标签，代表分类管理</li>
+                <li><strong>发送箭头：</strong>黄色箭头，代表快速发送</li>
+                <li><strong>整体风格：</strong>简洁、现代、易于识别</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // SVG图标代码
+        const svgCode = `<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="64" cy="64" r="60" fill="#007bff" stroke="#0056b3" stroke-width="2"/>
+  <rect x="35" y="30" width="58" height="70" rx="4" fill="white" stroke="#0056b3" stroke-width="2"/>
+  <line x1="45" y1="45" x2="83" y2="45" stroke="#0056b3" stroke-width="2"/>
+  <line x1="45" y1="55" x2="83" y2="55" stroke="#0056b3" stroke-width="1.5"/>
+  <line x1="45" y1="65" x2="83" y2="65" stroke="#0056b3" stroke-width="1.5"/>
+  <line x1="45" y1="75" x2="83" y2="75" stroke="#0056b3" stroke-width="1.5"/>
+  <polygon points="95,25 95,40 80,40 80,25" fill="#28a745" stroke="#1e7e34" stroke-width="1.5"/>
+  <circle cx="87.5" cy="32.5" r="3" fill="white"/>
+  <path d="M50 90 L78 90 L74 86 L74 94 L78 90" fill="#ffc107" stroke="#e0a800" stroke-width="1.5"/>
+</svg>`;
+
+        // 显示SVG代码
+        document.getElementById('svgCode').textContent = svgCode;
+
+        // 下载图标函数
+        function downloadIcon(size) {
+            const canvas = document.createElement('canvas');
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext('2d');
+            
+            // 创建图片对象
+            const img = new Image();
+            img.onload = function() {
+                ctx.drawImage(img, 0, 0, size, size);
+                
+                // 转换为PNG并下载
+                canvas.toBlob(function(blob) {
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `icon${size}.png`;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                });
+            };
+            
+            // 将SVG转换为data URL
+            const svgBlob = new Blob([svgCode], {type: 'image/svg+xml'});
+            const url = URL.createObjectURL(svgBlob);
+            img.src = url;
+        }
+
+        // 下载所有图标
+        function downloadAllIcons() {
+            const sizes = [16, 32, 48, 128];
+            sizes.forEach((size, index) => {
+                setTimeout(() => downloadIcon(size), index * 500);
+            });
+        }
+
+        // 页面加载完成后的初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Flomo Web Clipper 图标生成器已加载');
+        });
+    </script>
+</body>
+</html>

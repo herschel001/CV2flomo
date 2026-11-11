@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景圆形 -->
+  <circle cx="64" cy="64" r="60" fill="#007bff" stroke="#0056b3" stroke-width="2"/>
+  
+  <!-- 笔记图标 -->
+  <rect x="35" y="30" width="58" height="70" rx="4" fill="white" stroke="#0056b3" stroke-width="2"/>
+  
+  <!-- 纸张线条 -->
+  <line x1="45" y1="45" x2="83" y2="45" stroke="#0056b3" stroke-width="2"/>
+  <line x1="45" y1="55" x2="83" y2="55" stroke="#0056b3" stroke-width="1.5"/>
+  <line x1="45" y1="65" x2="83" y2="65" stroke="#0056b3" stroke-width="1.5"/>
+  <line x1="45" y1="75" x2="83" y2="75" stroke="#0056b3" stroke-width="1.5"/>
+  
+  <!-- 标签图标 -->
+  <polygon points="95,25 95,40 80,40 80,25" fill="#28a745" stroke="#1e7e34" stroke-width="1.5"/>
+  <circle cx="87.5" cy="32.5" r="3" fill="white"/>
+  
+  <!-- 发送箭头 -->
+  <path d="M50 90 L78 90 L74 86 L74 94 L78 90" fill="#ffc107" stroke="#e0a800" stroke-width="1.5"/>
+</svg>

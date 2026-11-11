@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flomo Web Clipper 测试页面</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background: #f8f9fa;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 2px dashed #007bff;
+            border-radius: 6px;
+            background: #f8f9ff;
+        }
+        .test-section h2 {
+            color: #495057;
+            margin-bottom: 15px;
+        }
+        .highlight {
+            background: #fff3cd;
+            padding: 10px;
+            border-left: 4px solid #ffc107;
+            margin: 15px 0;
+        }
+        .code-block {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .feature-list li:before {
+            content: "✅ ";
+            color: #28a745;
+            font-weight: bold;
+        }
+        .test-content {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+        .image-test {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .image-test img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Flomo Web Clipper 测试页面</h1>
+        
+        <div class="test-section">
+            <h2>📋 测试内容区域</h2>
+            <p>这是一个专门用于测试Flomo Web Clipper插件的页面。您可以在此页面上测试插件的各种功能。</p>
+            
+            <div class="highlight">
+                <strong>💡 测试提示：</strong> 选中这段文字，然后打开插件，看看是否能自动填充到原文区域。
+            </div>
+            
+            <p>Flomo Web Clipper 是一个功能强大的浏览器插件，专为flomo用户设计。它可以帮助您：</p>
+            <ul class="feature-list">
+                <li>快速记录网页笔记</li>
+                <li>支持标签管理（最多8个标签）</li>
+                <li>自动获取网页标题和URL</li>
+                <li>仅发送文字和链接；本地图片需明确提示不支持</li>
+                <li>双区域输入：原文 + 个人想法</li>
+                <li>一键发送到flomo</li>
+                <li>本地草稿保存</li>
+                <li>每日发送限制管理（100条/天）</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>🎯 功能测试区域</h2>
+            <p>请尝试以下测试：</p>
+            
+            <div class="test-content">
+                <h3>1. 文本选择测试</h3>
+                <p>选中下面这段文字，然后打开插件：</p>
+                <p><strong>人工智能正在改变我们的生活方式。从智能助手到自动驾驶，从医疗诊断到金融分析，AI技术正在各个领域发挥着重要作用。未来，人工智能将继续发展，为人类带来更多便利和可能性。</strong></p>
+            </div>
+            
+            <div class="test-content">
+                <h3>2. 代码块测试</h3>
+                <p>测试插件对代码块的处理：</p>
+                <div class="code-block">
+function testFlomoPlugin() {
+    const message = "Hello, Flomo!";
+    console.log(message);
+    return message;
+}
+
+// 调用函数
+testFlomoPlugin();
+                </div>
+            </div>
+            
+            <div class="test-content">
+                <h3>3. 列表测试</h3>
+                <p>测试有序和无序列表：</p>
+                <ol>
+                    <li>第一步：安装插件</li>
+                    <li>第二步：配置API地址</li>
+                    <li>第三步：开始使用</li>
+                </ol>
+                <ul>
+                    <li>支持标签管理</li>
+                    <li>自动获取网页信息</li>
+                    <li>一键发送到flomo</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🖼️ 图片测试</h2>
+            <p>确认图片不会被静默当作已上传：</p>
+            
+            <div class="image-test">
+                <p>您可以复制这张图片，然后在插件中粘贴，检查不支持上传的提示：</p>
+                <svg width="200" height="150" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="200" height="150" fill="#f0f8ff" stroke="#007bff" stroke-width="2"/>
+                    <circle cx="100" cy="75" r="40" fill="#007bff" opacity="0.7"/>
+                    <text x="100" y="80" text-anchor="middle" fill="white" font-size="16" font-weight="bold">TEST</text>
+                    <text x="100" y="120" text-anchor="middle" fill="#333" font-size="12">Flomo Web Clipper</text>
+                </svg>
+            </div>
+            
+            <div class="highlight">
+                <strong>图片测试方法：</strong>
+                <br>1. 右键点击上面的SVG图片，选择"复制图片"
+                <br>2. 打开插件，在原文区域粘贴
+                <br>3. 查看是否能正确显示和处理
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>⚙️ 插件功能测试清单</h2>
+            <p>请按照以下清单测试插件功能：</p>
+            
+            <div class="code-block">
+✅ 基础功能测试：
+□ 插件图标是否正常显示在工具栏
+□ 点击图标是否能打开弹窗
+□ 快捷键 Ctrl+Shift+F 是否能打开插件
+
+✅ 内容获取测试：
+□ 是否能自动获取当前网页标题
+□ 是否能自动获取当前网页URL
+□ 选中文本是否能自动填充到原文区域
+□ 点击"粘贴当前网页内容"按钮是否正常工作
+
+✅ 标签功能测试：
+□ 是否能添加标签（最多8个）
+□ 是否能删除标签
+□ 标签输入框是否支持回车添加
+□ 标签计数是否正确显示
+
+✅ 内容输入测试：
+□ 原文区域是否支持字数统计
+□ 个人想法区域是否支持字数统计
+□ 粘贴图片是否提示不支持，而不是显示上传成功
+□ 拖入图片是否阻止默认打开并提示不支持
+
+✅ 发送功能测试：
+□ 配置API地址后是否能正常发送
+□ 发送成功后是否有提示
+□ 每日计数是否正确更新
+□ 达到每日限制时是否有提示
+
+✅ 设置页面测试：
+□ 是否能正常打开设置页面
+□ API地址配置是否能保存
+□ 发送测试笔记前是否明确确认，且成功后计入次数
+□ 常用标签管理是否正常
+
+✅ 数据管理测试：
+□ 草稿是否能自动保存
+□ 草稿是否能正确加载
+□ 设置是否能正确保存和加载
+□ 数据导出/导入功能是否正常
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🎨 样式测试</h2>
+            <p>测试不同样式的文本处理：</p>
+            
+            <p><strong>粗体文本测试</strong> - 看看插件如何处理粗体文本</p>
+            <p><em>斜体文本测试</em> - 看看插件如何处理斜体文本</p>
+            <p><u>下划线文本测试</u> - 看看插件如何处理下划线文本</p>
+            <p><code>代码文本测试</code> - 看看插件如何处理代码文本</p>
+            
+            <div style="background: #e8f5e8; padding: 15px; border-radius: 4px; margin: 15px 0;">
+                <p><strong>引用文本测试</strong></p>
+                <p>这是一个引用样式的文本块，用于测试插件对不同样式文本的处理能力。</p>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>📊 性能测试建议</h2>
+            <p>建议测试以下性能场景：</p>
+            <ul>
+                <li>在长网页（大量内容）上的获取速度</li>
+                <li>同时打开多个标签页时的内存占用</li>
+                <li>频繁发送笔记时的响应速度</li>
+                <li>旧草稿图片是否可保存原图，并阻止静默丢弃</li>
+                <li>网络不稳定时的错误处理</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <strong>🎯 测试完成！</strong>
+            <br>如果您完成了所有测试项目，插件应该能够正常工作。
+            <br>如有问题，请查看控制台错误信息或提交Issue。
+        </div>
+    </div>
+
+    <script>
+        // 添加一些交互功能用于测试
+        document.addEventListener('mouseup', function() {
+            const selection = window.getSelection();
+            if (selection.toString().trim()) {
+                console.log('选中的文本:', selection.toString());
+            }
+        });
+
+        // 监听键盘事件
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.shiftKey && e.key === 'F') {
+                console.log('快捷键 Ctrl+Shift+F 被按下');
+            }
+        });
+
+        console.log('📝 Flomo Web Clipper 测试页面已加载');
+        console.log('📋 页面标题:', document.title);
+        console.log('🔗 页面URL:', window.location.href);
+        console.log('🎯 请按照测试清单进行功能测试');
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "name": "flomo-web-clipper",
+  "version": "1.0.1",
+  "description": "Chrome浏览器插件，快速发送笔记到flomo",
+  "main": "manifest.json",
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production && node scripts/verify-package.js",
+    "build:copy": "node build.js",
+    "check": "node scripts/check.js",
+    "test": "node --test tests/*.test.js",
+    "check:publication": "node scripts/check-publication.js"
+  },
+  "keywords": [
+    "flomo",
+    "note",
+    "extension",
+    "chrome",
+    "web-clipper"
+  ],
+  "author": "CV2flomo contributors",
+  "license": "MIT",
+  "devDependencies": {
+    "copy-webpack-plugin": "^14.0.0",
+    "jsdom": "^27.4.0",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.0"
+  },
+  "type": "module",
+  "engines": {
+    "node": "^22.12.0 || >=24.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/herschel001/CV2flomo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/herschel001/CV2flomo/issues"
+  },
+  "homepage": "https://github.com/herschel001/CV2flomo#readme"
+}
